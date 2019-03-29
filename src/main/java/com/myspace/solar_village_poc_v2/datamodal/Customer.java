@@ -6,12 +6,104 @@ package com.myspace.solar_village_poc_v2.datamodal;
 
 public class Customer implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Customer() {
-    }
+	@org.kie.api.definition.type.Label(value = "Name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "addressLine1")
+	private java.lang.String addressLine1;
+	@org.kie.api.definition.type.Label(value = "addressLine2")
+	private java.lang.String addressLine2;
+	@org.kie.api.definition.type.Label(value = "city")
+	private java.lang.String city;
+	@org.kie.api.definition.type.Label(value = "state")
+	private java.lang.String state;
+	@org.kie.api.definition.type.Label(value = "zipCode")
+	private java.lang.String zipCode;
+	@org.kie.api.definition.type.Label(value = "phoneNumber")
+	private java.lang.String phoneNumber;
+	@org.kie.api.definition.type.Label(value = "email")
+	private java.lang.String email;
 
+	public Customer() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.String getAddressLine1() {
+		return this.addressLine1;
+	}
+
+	public void setAddressLine1(java.lang.String addressLine1) {
+		this.addressLine1 = addressLine1;
+	}
+
+	public java.lang.String getAddressLine2() {
+		return this.addressLine2;
+	}
+
+	public void setAddressLine2(java.lang.String addressLine2) {
+		this.addressLine2 = addressLine2;
+	}
+
+	public java.lang.String getCity() {
+		return this.city;
+	}
+
+	public void setCity(java.lang.String city) {
+		this.city = city;
+	}
+
+	public java.lang.String getState() {
+		return this.state;
+	}
+
+	public void setState(java.lang.String state) {
+		this.state = state;
+	}
+
+	public java.lang.String getZipCode() {
+		return this.zipCode;
+	}
+
+	public void setZipCode(java.lang.String zipCode) {
+		this.zipCode = zipCode;
+	}
+
+	public java.lang.String getPhoneNumber() {
+		return this.phoneNumber;
+	}
+
+	public void setPhoneNumber(java.lang.String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public java.lang.String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public Customer(java.lang.String name, java.lang.String addressLine1,
+			java.lang.String addressLine2, java.lang.String city,
+			java.lang.String state, java.lang.String zipCode,
+			java.lang.String phoneNumber, java.lang.String email) {
+		this.name = name;
+		this.addressLine1 = addressLine1;
+		this.addressLine2 = addressLine2;
+		this.city = city;
+		this.state = state;
+		this.zipCode = zipCode;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+	}
 
 }
