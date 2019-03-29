@@ -23,6 +23,7 @@ public class NewOrder implements java.io.Serializable {
 
 	public NewOrder() {
 	    orderID = "SV-"+String.valueOf(System.currentTimeMillis());
+	    hoaApproval = new private com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval();
 	}
 
 	public com.myspace.solar_village_poc_v2.datamodal.Customer getCustomer() {
