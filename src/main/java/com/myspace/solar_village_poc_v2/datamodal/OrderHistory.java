@@ -6,12 +6,58 @@ package com.myspace.solar_village_poc_v2.datamodal;
 
 public class OrderHistory implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public OrderHistory() {
-    }
+	@org.kie.api.definition.type.Label(value = "seq")
+	private java.lang.Integer seq;
+	@org.kie.api.definition.type.Label(value = "date")
+	private java.util.Date date;
+	@org.kie.api.definition.type.Label(value = "notes")
+	private java.lang.String notes;
+	@org.kie.api.definition.type.Label(value = "party")
+	private java.lang.String party;
 
+	public OrderHistory() {
+	}
 
+	public java.lang.Integer getSeq() {
+		return this.seq;
+	}
 
+	public void setSeq(java.lang.Integer seq) {
+		this.seq = seq;
+	}
+
+	public java.util.Date getDate() {
+		return this.date;
+	}
+
+	public void setDate(java.util.Date date) {
+		this.date = date;
+	}
+
+	public java.lang.String getNotes() {
+		return this.notes;
+	}
+
+	public void setNotes(java.lang.String notes) {
+		this.notes = notes;
+	}
+
+	public java.lang.String getParty() {
+		return this.party;
+	}
+
+	public void setParty(java.lang.String party) {
+		this.party = party;
+	}
+
+	public OrderHistory(java.lang.Integer seq, java.util.Date date,
+			java.lang.String notes, java.lang.String party) {
+		this.seq = seq;
+		this.date = date;
+		this.notes = notes;
+		this.party = party;
+	}
 
 }
