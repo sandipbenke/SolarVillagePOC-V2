@@ -6,12 +6,70 @@ package com.myspace.solar_village_poc_v2.datamodal;
 
 public class SolarOrderApproval implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public SolarOrderApproval() {
-    }
+	@org.kie.api.definition.type.Label(value = "approvalType")
+	private java.lang.String approvalType;
+	@org.kie.api.definition.type.Label(value = "requestedDate")
+	private java.util.Date requestedDate;
+	@org.kie.api.definition.type.Label(value = "lastUpdateDate")
+	private java.util.Date lastUpdateDate;
+	@org.kie.api.definition.type.Label(value = "status")
+	private java.lang.String status;
+	@org.kie.api.definition.type.Label(value = "notes")
+	private java.lang.String notes;
 
+	public SolarOrderApproval() {
+	}
 
+	public java.lang.String getApprovalType() {
+		return this.approvalType;
+	}
 
+	public void setApprovalType(java.lang.String approvalType) {
+		this.approvalType = approvalType;
+	}
+
+	public java.util.Date getRequestedDate() {
+		return this.requestedDate;
+	}
+
+	public void setRequestedDate(java.util.Date requestedDate) {
+		this.requestedDate = requestedDate;
+	}
+
+	public java.util.Date getLastUpdateDate() {
+		return this.lastUpdateDate;
+	}
+
+	public void setLastUpdateDate(java.util.Date lastUpdateDate) {
+		this.lastUpdateDate = lastUpdateDate;
+	}
+
+	public java.lang.String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
+	public java.lang.String getNotes() {
+		return this.notes;
+	}
+
+	public void setNotes(java.lang.String notes) {
+		this.notes = notes;
+	}
+
+	public SolarOrderApproval(java.lang.String approvalType,
+			java.util.Date requestedDate, java.util.Date lastUpdateDate,
+			java.lang.String status, java.lang.String notes) {
+		this.approvalType = approvalType;
+		this.requestedDate = requestedDate;
+		this.lastUpdateDate = lastUpdateDate;
+		this.status = status;
+		this.notes = notes;
+	}
 
 }
