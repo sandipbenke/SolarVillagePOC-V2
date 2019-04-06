@@ -8,16 +8,19 @@ public class SolarOrderApproval implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "approvalType")
+	@org.kie.api.definition.type.Label("approvalType")
 	private java.lang.String approvalType;
-	@org.kie.api.definition.type.Label(value = "requestedDate")
+	@org.kie.api.definition.type.Label("requestedDate")
 	private java.util.Date requestedDate;
-	@org.kie.api.definition.type.Label(value = "lastUpdateDate")
+	@org.kie.api.definition.type.Label("lastUpdateDate")
 	private java.util.Date lastUpdateDate;
-	@org.kie.api.definition.type.Label(value = "status")
+	@org.kie.api.definition.type.Label("status")
 	private java.lang.String status;
-	@org.kie.api.definition.type.Label(value = "notes")
+	@org.kie.api.definition.type.Label("notes")
 	private java.lang.String notes;
+
+	@org.kie.api.definition.type.Label(value = "requestId")
+	private java.lang.String requestId;
 
 	public SolarOrderApproval() {
 	}
@@ -62,14 +65,24 @@ public class SolarOrderApproval implements java.io.Serializable {
 		this.notes = notes;
 	}
 
+	public java.lang.String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(java.lang.String requestId) {
+		this.requestId = requestId;
+	}
+
 	public SolarOrderApproval(java.lang.String approvalType,
 			java.util.Date requestedDate, java.util.Date lastUpdateDate,
-			java.lang.String status, java.lang.String notes) {
+			java.lang.String status, java.lang.String notes,
+			java.lang.String requestId) {
 		this.approvalType = approvalType;
 		this.requestedDate = requestedDate;
 		this.lastUpdateDate = lastUpdateDate;
 		this.status = status;
 		this.notes = notes;
+		this.requestId = requestId;
 	}
 
 }
