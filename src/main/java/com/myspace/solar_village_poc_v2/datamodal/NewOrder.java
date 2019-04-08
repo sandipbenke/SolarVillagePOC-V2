@@ -8,22 +8,26 @@ public class NewOrder implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "customer")
+	@org.kie.api.definition.type.Label("customer")
 	private com.myspace.solar_village_poc_v2.datamodal.Customer customer;
-	@org.kie.api.definition.type.Label(value = "hoaApproval")
+	@org.kie.api.definition.type.Label("hoaApproval")
 	private com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval hoaApproval;
-	@org.kie.api.definition.type.Label(value = "electricalPermit")
+	@org.kie.api.definition.type.Label("electricalPermit")
 	private com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval electricalPermit;
-	@org.kie.api.definition.type.Label(value = "structuralPermit")
+	@org.kie.api.definition.type.Label("structuralPermit")
 	private com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval structuralPermit;
-	@org.kie.api.definition.type.Label(value = "orderHistory")
+	@org.kie.api.definition.type.Label("orderHistory")
 	private java.util.List<com.myspace.solar_village_poc_v2.datamodal.OrderHistory> orderHistory;
-	@org.kie.api.definition.type.Label(value = "orderID")
+	@org.kie.api.definition.type.Label("orderID")
 	private java.lang.String orderID;
 
+	@org.kie.api.definition.type.Label(value = "status")
+	private java.lang.String status;
+
 	public NewOrder() {
-	   // orderID = "SV-"+String.valueOf(System.currentTimeMillis());
-	   // hoaApproval = new private com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval();
+		// orderID = "SV-"+String.valueOf(System.currentTimeMillis());
+		// hoaApproval = new private
+		// com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval();
 	}
 
 	public com.myspace.solar_village_poc_v2.datamodal.Customer getCustomer() {
@@ -79,19 +83,28 @@ public class NewOrder implements java.io.Serializable {
 		this.orderID = orderID;
 	}
 
+	public java.lang.String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
 	public NewOrder(
 			com.myspace.solar_village_poc_v2.datamodal.Customer customer,
 			com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval hoaApproval,
 			com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval electricalPermit,
 			com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval structuralPermit,
 			java.util.List<com.myspace.solar_village_poc_v2.datamodal.OrderHistory> orderHistory,
-			java.lang.String orderID) {
+			java.lang.String orderID, java.lang.String status) {
 		this.customer = customer;
 		this.hoaApproval = hoaApproval;
 		this.electricalPermit = electricalPermit;
 		this.structuralPermit = structuralPermit;
 		this.orderHistory = orderHistory;
 		this.orderID = orderID;
+		this.status = status;
 	}
 
 }
