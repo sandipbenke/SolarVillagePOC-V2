@@ -20,9 +20,8 @@ public class NewOrder implements java.io.Serializable {
 	private java.util.List<com.myspace.solar_village_poc_v2.datamodal.OrderHistory> orderHistory;
 	@org.kie.api.definition.type.Label("orderID")
 	private java.lang.String orderID;
-
 	@org.kie.api.definition.type.Label(value = "orderStatus")
-	private java.lang.String orderStatus;
+	public java.lang.String orderStatus;
 
 	public NewOrder() {
 		// orderID = "SV-"+String.valueOf(System.currentTimeMillis());
