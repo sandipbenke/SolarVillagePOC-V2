@@ -21,6 +21,9 @@ public class NewOrder implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("orderID")
 	private java.lang.String orderID;
 
+	@org.kie.api.definition.type.Label(value = "orderStatus")
+	private java.lang.String orderStatus;
+
 	public NewOrder() {
 		// orderID = "SV-"+String.valueOf(System.currentTimeMillis());
 		// hoaApproval = new private
@@ -80,19 +83,28 @@ public class NewOrder implements java.io.Serializable {
 		this.orderID = orderID;
 	}
 
+	public java.lang.String getOrderStatus() {
+		return this.orderStatus;
+	}
+
+	public void setOrderStatus(java.lang.String orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
 	public NewOrder(
 			com.myspace.solar_village_poc_v2.datamodal.Customer customer,
 			com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval hoaApproval,
 			com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval electricalPermit,
 			com.myspace.solar_village_poc_v2.datamodal.SolarOrderApproval structuralPermit,
 			java.util.List<com.myspace.solar_village_poc_v2.datamodal.OrderHistory> orderHistory,
-			java.lang.String orderID) {
+			java.lang.String orderID, java.lang.String orderStatus) {
 		this.customer = customer;
 		this.hoaApproval = hoaApproval;
 		this.electricalPermit = electricalPermit;
 		this.structuralPermit = structuralPermit;
 		this.orderHistory = orderHistory;
 		this.orderID = orderID;
+		this.orderStatus = orderStatus;
 	}
 
 }
